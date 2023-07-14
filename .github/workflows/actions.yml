@@ -18,7 +18,7 @@ jobs:
       - name: Create artifact directory
         run: mkdir -p path/to/artifact
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)" > path/to/artifact/world.txt
+        run: python -c "import sys; print(sys.version)" > path/to/artifact/world${{ matrix.python-version }}.txt
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
